@@ -29,5 +29,5 @@ jobs:
           docker build -t ${{ secrets.DOCKER_USER }}/enanacicd:latest .
       - name: Push
         run: |
-          docker push pamaes/enanacicd:${{ github.sha }}
-          docker push pamaes/enanacicd:latest
+          docker push ${{ secrets.DOCKER_USER }}/enanacicd:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USER }}/enanacicd:latest
